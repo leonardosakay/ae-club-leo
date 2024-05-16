@@ -1,4 +1,3 @@
--- data in the `coffee_shop` dataset¹ comes from our sales system
 {{ config(materialized='table') }}
 
 
