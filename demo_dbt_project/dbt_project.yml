@@ -22,7 +22,6 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-model-paths: ["models"]
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
@@ -38,3 +37,4 @@ models:
       orders:
        +schema: dbt_leosakay
       +materialized: view
+      
