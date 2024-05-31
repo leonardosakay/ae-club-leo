@@ -8,7 +8,7 @@ with source as (
 renamed as (
 
     select
-        id as RepositoryID
+        id as RepositoryID,
         archived  as ArchivedFlag,
         created_at as CreatedDate,
         default_branch as DefaultBranchName,

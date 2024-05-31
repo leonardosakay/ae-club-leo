@@ -8,14 +8,13 @@ with source as (
 renamed as (
 
     select
-        id,
-        _fivetran_synced,
-        base_label,
+        id as PullRequestID,
+        base_user_id as UserID,
+        base_repo_id As RepositoryID,
+        base_label as BaseLabel,
         base_ref,
-        base_repo_id,
         base_sha,
-        base_user_id,
-        draft,
+        draft IsDraftFlag,
         head_label,
         head_ref,
         head_repo_id,
