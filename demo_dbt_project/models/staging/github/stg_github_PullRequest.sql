@@ -20,7 +20,7 @@ renamed as (
         head_repo_id,
         head_sha,
         head_user_id,
-        issue_id,
+        issue_id as IssueID,
         merge_commit_sha
 
     from source

@@ -20,7 +20,7 @@ renamed as (
         repository_id,
         state,
         title,
-        updated_at,
+        updated_at as UpdatedDate,
         user_id
 
     from source

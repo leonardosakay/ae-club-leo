@@ -4,7 +4,7 @@ with source as (
 )
 ,renamed as (
     select 
-issue_id,    
+issue_id as IssueID,    
 actor_id MergedUserID,
 commit_sha,
 merged_at MergedDate
