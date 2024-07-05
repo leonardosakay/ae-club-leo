@@ -1,3 +1,4 @@
+{{config(materialized = 'table')}}
 WITH pull_request AS (
     SELECT
         *
@@ -37,7 +38,7 @@ final as (
             WHEN i.ClosedDate IS NOT NULL THEN 'Closed Without Merge'
             ELSE 'Open'
         END AS MergeState,
-        DATE_DIFF(i.CreatedDate, im.MergedDate, hour) / 24 AS days_open_to
+       round(DATE_DIFF(im.MergedDate, i.CreatedDate, hour) / 24, 2) AS DaysOpenToMerge
    from
       pull_request as pr
       left join repository as r on pr.head_repo_id = r.RepositoryID
