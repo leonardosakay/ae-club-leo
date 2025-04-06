@@ -1,6 +1,7 @@
 {{ config(
     materialized='incremental',
-    unique_key= 'github_username'
+    unique_key= 'github_username',
+    enabled=false
  ) }}
  
 with events as (
